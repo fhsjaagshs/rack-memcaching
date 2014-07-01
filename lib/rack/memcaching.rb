@@ -19,7 +19,7 @@ module Rack
 			@@servers = opts[:servers] || ["localhost:11211"]
 			
 			# Just in case :exclude is a single rule
-			@@exclude = [@@exclude] unless @@exclude === Array
+			@@exclude = [@@exclude] unless Array === @@exclude
     end
 		
 		def mc_stack
